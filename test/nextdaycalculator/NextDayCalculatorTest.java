@@ -63,8 +63,8 @@ class NextDayCalculatorTest {
 
     @Test
     void testGetDayMonthYear5() {
-        NextDayCalculator.getNextDay(29, 2, 2018);
-        setExpectedDayMonthYear(1, 3, 2018);
+        NextDayCalculator.getNextDay(29, 2, 2020);
+        setExpectedDayMonthYear(1, 3, 2020);
 
         String result = Arrays.toString(NextDayCalculator.arrayNextDMY);
         String expectedDate = Arrays.toString(arrayExpectedDMY);

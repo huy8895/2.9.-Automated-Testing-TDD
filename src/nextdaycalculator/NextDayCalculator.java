@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class NextDayCalculator {
     private static int dayOfMonth;
-    private static final int[] monthOfPrimeYear = {31, 29, 31, 30, 31, 31, 30, 31, 30, 31};
-    private static final int[] monthOfNormalYear = {31, 28, 31, 30, 31, 31, 30, 31, 30, 31};
+    private static final int[] monthOfPrimeYear = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    private static final int[] monthOfNormalYear = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     static int[] arrayNextDMY;
 
     public static void getNextDay(int day, int month, int year) {
@@ -45,16 +45,15 @@ public class NextDayCalculator {
     }
 
 
-    public static boolean isLeapYear (int year){
+    public static boolean isLeapYear(int year) {
         boolean isLeapYear = false;
 
-        System.out.println("Enter a year: ");
         boolean isDivisibleBy4 = year % 4 == 0;
-        if (isDivisibleBy4){
+        if (isDivisibleBy4) {
             boolean isDivisibleBy100 = year % 100 == 0;
-            if (isDivisibleBy100){
+            if (isDivisibleBy100) {
                 boolean isDivisibleBy400 = year % 400 == 0;
-                if (isDivisibleBy400){
+                if (isDivisibleBy400) {
                     isLeapYear = true;
                 }
             } else {
@@ -65,11 +64,4 @@ public class NextDayCalculator {
     }
 
 }
-class test{
-    public static void main(String[] args) {
-        NextDayCalculator.getNextDay(29,2,2020);
-        System.out.println(Arrays.toString(NextDayCalculator.arrayNextDMY));
-    }
-}
-
 
